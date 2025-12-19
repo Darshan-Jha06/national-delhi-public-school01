@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - NDPS.in</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <style>
+        /* Base Styles & Typography */
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .main-content { 
+            padding: 40px 20px; 
+            max-width: 1100px; 
+            margin: auto; 
+        }
+        .section-heading { 
+            font-size: 2em; 
+            color: #1a237e; /* Dark Navy Blue */
+            margin-bottom: 25px; 
+            border-bottom: 3px solid #ff9800; /* Orange Accent */
+            padding-bottom: 5px; 
+            display: inline-block;
+        }
+
+        /* Curriculum Overview Cards (New UI) */
+        .curriculum-grid {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .curriculum-card {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .curriculum-card:hover {
+            transform: translateY(-5px);
+            border-top: 5px solid #0056b3; /* NDPS Blue highlight on hover */
+        }
+        .curriculum-card h3 { 
+            color: #0056b3; 
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        /* Icon styling (assuming you are using some form of icon font like FontAwesome, 
+           agar nahi to yahan sirf text use hoga) */
+        .curriculum-card h3 span {
+            font-size: 1.5em; 
+            color: #ff9800;
+        }
+
+        /* Academic Departments List */
+        .department-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .department-list li {
+            background-color: #e3f2fd; /* Light Blue background */
+            padding: 15px;
+            border-left: 5px solid #0d47a1;
+            border-radius: 4px;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Affiliation Banner */
+        .affiliation-banner {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 4px;
+            margin-bottom: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .curriculum-grid { flex-direction: column; }
+            .department-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+            <img src="school logo.jpg" alt="NDPS Logo">
+            <h1>NATIONAL DELHI PUBLIC SCHOOL</h1>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="main-nav" id="nav-menu">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html" class="active">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="cta-button-nav">Portal Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <div class="main-content">
+        
+        <h2 class="section-heading">Academics at National Delhi Public School</h2>
+
+        <div class="affiliation-banner">
+            <h3>Affiliation: Central Board of Secondary Education (CBSE) - Upto Class X</h3>
+        </div>
+
+        <h2 class="section-heading">Our Curriculum: Fostering Growth</h2>
+        <div class="curriculum-grid">
+            
+            <div class="curriculum-card">
+                <h3><span>📚</span> Primary Level (Classes I - V)</h3>
+                <p>Focus on foundational literacy, numeracy, and environmental awareness. We use activity-based learning methods to build a strong base and curiosity in young minds.</p>
+                <ul>
+                    <li>Activity-Based Learning</li>
+                    <li>Focus on Language and Math Basics</li>
+                </ul>
+            </div>
+            
+            <div class="curriculum-card">
+                <h3><span>🔬</span> Middle Level (Classes VI - VIII)</h3>
+                <p>Introduction to specialized subjects, critical thinking, and project-based assignments. Students are encouraged to explore their interests through various clubs.</p>
+                <ul>
+                    <li>Project-Based Learning</li>
+                    <li>Introduction to Science Labs</li>
+                </ul>
+            </div>
+            
+            <div class="curriculum-card">
+                <h3><span>🎓</span> Secondary Level (Classes IX - X)</h3>
+                <p>Preparation for the CBSE Board Examinations. Dedicated guidance, intensive revision, and career counselling to help students choose the right stream after Class 10.</p>
+                <ul>
+                    <li>Intensive Board Exam Preparation</li>
+                    <li>Regular Mock Tests and Assessments</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-heading">Academic Departments</h2>
+        <ul class="department-list">
+            <li>Science (Physics, Chemistry, Biology)</li>
+            <li>Mathematics</li>
+            <li>Languages (English, Hindi,)</li>
+            <li>Social Sciences (History, Geography, Economics, Political Science)</li>
+            <li>Computer Science & Information Technology</li>
+            
+        </ul>
+
+    </div>
+     <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h4>Contact NDPS</h4>
+                <p>Address: Nandapatti, Bemipur, Darbhanga, Bihar</p>
+                <p>Phone: 8235340663</p>
+                <p>Email: <a href="mailto:info@ndps.in">info@ndps.in</a></p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    
+                    <li><a href="calendar.html">School Calendar</a></li>  
+                    <li><a href="fee_structure.html">Fee Structure</a></li> 
+                    
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <p>Connect with us on social media.</p>
+                <ul>
+        <li >
+            <a href="https://www.facebook.com/share/1AvEoWSKnL/" target="_blank" aria-label="Follow us on Facebook" class="facebook">
+                <img src="facebook.jpg" alt="Facebook" class="social-icon"> 
+                <span>Facebook</span>
+            </a>
+        </li>
+        </ul>
+            </div>
+        </div>
+        
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIONAL DELHI PUBLIC SCHOOL. All rights reserved.</p>
+            <p class="developer-credit">
+                Developed by <span class="animated-name">Darshan Jha </span><span class="heart-symbol">❤️</span><span class="heart-symbol">❤️</span> | 
+                Mentored By <span class="gradient-name">Vikash Kr.</span>
+            </p>
+        </div>
+        </footer>
+     <script> document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            // Menu ko dikhane ya chhupane ke liye 'active' class toggle karein
+            navMenu.classList.toggle('active');
+            
+            // Icon badalne ke liye (Bars to Cross)
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+}); </script>
+    </body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - NDPS.in</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <style>
+        /* Base Styles */
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; 
+            color: #333;
+            line-height: 1.6;
+        }
+        .main-content { 
+            padding: 40px 20px 60px; 
+            max-width: 1100px; 
+            margin: auto; 
+        }
+        .section-heading { 
+            font-size: 2.2em; 
+            color: #1a237e;
+            margin-bottom: 30px; 
+            border-bottom: 3px solid #ff9800;
+            padding-bottom: 5px; 
+            display: inline-block;
+        }
+
+        /* Hero Banner */
+        .admission-hero {
+            background-color: #0056b3; 
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .admission-hero h1 { font-size: 2.5em; margin: 0 0 10px; }
+        .admission-hero button {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .admission-hero button:hover {
+            background-color: #e68900;
+        }
+
+        /* 1. Step-by-Step Process (Timeline/Cards) */
+        .step-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        .step-card {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border-top: 4px solid #0056b3;
+        }
+        .step-card h3 {
+            color: #0056b3;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .step-card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .step-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff9800; /* Orange number */
+            line-height: 1;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        /* 2. Modern Tabs for Information */
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            background: #eee;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #555;
+            transition: background-color 0.3s;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .tab-button.active {
+            background-color: #0056b3;
+            color: white;
+            border-bottom: 2px solid #0056b3;
+        }
+        .tab-content {
+            background: white;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 0 5px 5px 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        .tab-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .tab-content ul li {
+            background: #f1f8e9; /* Light Green for clarity */
+            margin-bottom: 10px;
+            padding: 12px;
+            border-left: 4px solid #4CAF50; /* Green accent */
+            border-radius: 4px;
+            font-size: 1.05em;
+        }
+
+        /* 3. Call to Action Box */
+        .cta-box {
+            background-color: #fff3e0; /* Light Orange/Yellow */
+            border: 1px solid #ffb74d;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta-box h3 { color: #e65100; margin-top: 0; }
+    </style>
+</head>
+<body>
+     <header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+            <img src="school logo.jpg" alt="NDPS Logo">
+            <h1>NATIONAL DELHI PUBLIC SCHOOL</h1>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="main-nav" id="nav-menu">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html" class="active">Admissions</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="cta-button-nav">Portal Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <div class="main-content">
+        
+        <div class="admission-hero">
+            <h1 style="color: #ccc;">Start Your Journey with NDPS</h1>
+            <p>Admissions are open for the Academic Year 2026-2027 for Classes Nursery to X.</p>
+            <button onclick="document.getElementById('inquiryForm').scrollIntoView({behavior: 'smooth'})">
+                Apply Now / Request Brochure
+            </button>
+        </div>
+
+        <h2 class="section-heading">Our Simple Admission Process</h2>
+        <div class="step-container">
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3>Inquiry & Form</h3>
+                <p>Fill the online inquiry form or collect the registration form from the school office.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3>Assessment</h3>
+                <p>Student interaction/assessment is scheduled for the applicant (Classes I onwards).</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3>Confirmation</h3>
+                <p>If selected, submit necessary documents and pay the admission fee to secure the seat.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <h3>Welcome</h3>
+                <p>Orientation session and student induction before the start of the new academic session.</p>
+            </div>
+        </div>
+
+        <h2 class="section-heading">Key Admission Details</h2>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'documents')">Documents Required</button>
+            <button class="tab-button" onclick="openTab(event, 'eligibility')">Age & Eligibility</button>
+            <button class="tab-button" onclick="openTab(event, 'fee')">Fee Structure</button>
+        </div>
+        
+        <div id="documents" class="tab-content">
+            <h3>Documents Required for Admission</h3>
+            <ul>
+                <li>Recent passport-size photographs of the student and parents.</li>
+                <li>Copy of the student's Birth Certificate.</li>
+                <li>Transfer Certificate (TC) from the previous school (Class I onwards).</li>
+                <li>Copy of the last Academic Report Card.</li>
+                <li>Copy of Aadhar Card (Student and Parents).</li>
+            </ul>
+        </div>
+
+        <div id="eligibility" class="tab-content" style="display: none;">
+            <h3>Age Criteria (As on 31st March 2026)</h3>
+            <p>Nursery: 3+ years | KG: 4+ years | Class I: 5+ years, and so on.</p>
+            <p>Admission is subject to clearing the entrance assessment and seat availability.</p>
+        </div>
+
+        <div id="fee" class="tab-content" style="display: none;">
+            <h3>Fee Payment Information</h3>
+            <p>Detailed fee structure is available on the <a href="fee_structure.html" style="color: #ff9800; font-weight: bold;">Fee Structure Page</a>.</p>
+            <ul>
+                <li>Fees are payable Quarterly (4 Installments).</li>
+                <li>A non-refundable registration fee is applicable upon submission of the form.</li>
+            </ul>
+        </div>
+        
+        <div class="cta-box">
+            <h2 id="inquiryForm">Online Admission Inquiry Form</h2>
+            <p>Fill out the form below and our admissions team will contact you within 24 hours.</p>
+            
+           
+        </div>
+
+    </div>
+    <form id="admissionInquiryForm" style="max-width: 600px; margin: 20px auto;">
+    <input type="text" id="parentName" name="ParentName" placeholder="Parent Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+    <input type="email" id="parentEmail" name="ParentEmail" placeholder="Email Address" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+    <input type="tel" id="mobileNumber" name="MobileNumber" placeholder="Mobile Number" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+    <select id="classApplying" name="ClassApplying" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        <option value="">Applying for Class (Nursery to X)</option>
+        <option value="Nursery">Nursery</option>
+        <option value="KG">KG</option>
+        <option value="Class I">Class I</option>
+        <option value="Class X">Class II</option>
+        <option value="Class I">Class III</option>
+        <option value="Class X">Class IV</option>
+        <option value="Class I">Class V</option>
+        <option value="Class X">Class VI</option>
+        <option value="Class I">Class VII</option>
+        <option value="Class X">Class VIII</option>
+        <option value="Class I">Class IX</option>
+        <option value="Class X">Class X</option>
+    </select>
+    <button type="submit" id="submitBtn" style="width: 100%; padding: 12px; background-color: #e65100; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit Inquiry</button>
+</form>
+
+<p id="inquiryMessage" style="text-align: center; margin-top: 20px; font-weight: bold;"></p>
+    
+    <script>
+        function openTab(evt, tabName) {
+            // Saare tab content ko hide karo
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Saare buttons se 'active' class hatao
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Current tab content aur button ko active karo
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        // Default tab ko open karo jab page load ho
+        document.addEventListener("DOMContentLoaded", function() {
+            // First tab ko default active rakho
+            document.querySelector(".tab-button").click();
+        });
+    </script>
+    <script>
+    document.getElementById('admissionInquiryForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Default form submission ko roko
+        
+        const form = e.target;
+        const submitBtn = document.getElementById('submitBtn');
+        const messageDisplay = document.getElementById('inquiryMessage');
+        
+        // 1. Data Collect Karna
+        const name = form.ParentName.value;
+        const email = form.ParentEmail.value;
+        const mobile = form.MobileNumber.value;
+        const classApplied = form.ClassApplying.value;
+
+        // 2. Email Body Banana
+        const subject = encodeURIComponent(`New Admission Inquiry for ${classApplied}`);
+        const body = encodeURIComponent(
+            `Dear Admissions Team,\n\n` +
+            `A new inquiry has been submitted through the NDPS website:\n\n` +
+            `Parent Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Mobile: ${mobile}\n` +
+            `Applying for Class: ${classApplied}\n\n` +
+            `Please follow up with the parent immediately.`
+        );
+
+        // 3. Mailto Link Banana
+        // Yahan par 'your_receiving_email@ndps.in' ki jagah apna email address daalein
+        const recipient = 'admissions@ndps.in'; // <--- APNA EMAIL ADDRESS YAHAN BADLEIN!
+        
+        const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+        // 4. User ko Email Client par Redirect Karna
+        
+        // Button aur message ko update karo
+        submitBtn.textContent = 'Opening Mail Client...';
+        submitBtn.disabled = true;
+        messageDisplay.style.color = 'green';
+        messageDisplay.textContent = 'Please confirm and send the email in the new window.';
+        
+        // Link ko open karo
+        window.location.href = mailtoLink;
+
+        // 5. Thodi der baad form ko reset kardo (Optional)
+        setTimeout(() => {
+            form.reset();
+            submitBtn.textContent = 'Submit Inquiry';
+            submitBtn.disabled = false;
+        }, 3000);
+    });
+    
+    // Yahan par openTab function bhi rakhein agar woh admissions.html mein use ho raha hai
+    function openTab(evt, tabName) {
+        // ... (Tab functionality code) ...
+    }
+    
+</script>
+<script>
+        function openTab(evt, tabName) {
+            // 1. Saare tab content ko hide karo
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // 2. Saare buttons se 'active' class hatao
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                // Ensure only the active class is replaced
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // 3. Current tab content aur button ko active karo
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        // 4. Default tab ko open karo jab page load ho
+        document.addEventListener("DOMContentLoaded", function() {
+            // "documents" tab ko default active rakho
+            document.querySelector(".tab-button").click(); 
+        });
+    </script>
+    
+     <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h4>Contact NDPS</h4>
+                <p>Address: Nandapatti, Bemipur, Darbhanga, Bihar</p>
+                <p>Phone: 8235340663</p>
+                <p>Email: <a href="mailto:info@ndps.in">info@ndps.in</a></p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    
+                    <li><a href="calendar.html">School Calendar</a></li>  
+                    <li><a href="fee_structure.html">Fee Structure</a></li> 
+                    
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <p>Connect with us on social media.</p>
+                <ul>
+        <li >
+            <a href="https://www.facebook.com/share/1AvEoWSKnL/" target="_blank" aria-label="Follow us on Facebook" class="facebook">
+                <img src="facebook.jpg" alt="Facebook" class="social-icon"> 
+                <span>Facebook</span>
+            </a>
+        </li>
+        </ul>
+            </div>
+        </div>
+        
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIONAL DELHI PUBLIC SCHOOL. All rights reserved.</p>
+            <p class="developer-credit">
+                Developed by <span class="animated-name">Darshan Jha </span><span class="heart-symbol">❤️</span><span class="heart-symbol">❤️</span> | 
+                Mentored By <span class="gradient-name">Vikash Kr.</span>
+            </p>
+        </div>
+        </footer>
+     <script> document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            // Menu ko dikhane ya chhupane ke liye 'active' class toggle karein
+            navMenu.classList.toggle('active');
+            
+            // Icon badalne ke liye (Bars to Cross)
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+}); </script>
+    </body>
+</html>

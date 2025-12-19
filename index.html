@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATIONAL DELHI PUBLIC SCHOOL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+            <img src="school logo.jpg" alt="NDPS Logo">
+            <h1>NATIONAL DELHI PUBLIC SCHOOL</h1>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="main-nav" id="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="cta-button-nav">Portal Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ <section class="news-ticker">
+        <div class="container">
+            <b>LATEST NEWS:</b>
+            <marquee direction="left" scrollamount="5">
+                * Annual Sports Day on December 20th! | * New academic session starts in April. Check the Admissions page! | * Principal's message on the NDPS Founders' Day.
+            </marquee>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Excellence in Education</h2>
+            <p>Welcome to NATIONAL DELHI PUBLIC SCHOOL - Shaping Futures with Quality Education.</p>
+            <a href="admissions.html" class="cta-button">Apply for Admission Now</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <h3>Why Choose NDPS?</h3>
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h4>Experienced Faculty</h4>
+                    <p>Our dedicated teachers are experts in their fields, committed to student growth.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Modern Infrastructure</h4>
+                    <p>computer labs and sports facilities.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h4>Contact NDPS</h4>
+                <p>Address: Nandapatti, Bemipur, Darbhanga, Bihar</p>
+                <p>Phone: 8235340663</p>
+                <p>Email: <a href="mailto:info@ndps.in">info@ndps.in</a></p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    
+                    <li><a href="calendar.html">School Calendar</a></li>  
+                    <li><a href="fee_structure.html">Fee Structure</a></li> 
+                    
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <p>Connect with us on social media.</p>
+                <ul>
+        <li >
+            <a href="https://www.facebook.com/share/1AvEoWSKnL/" target="_blank" aria-label="Follow us on Facebook" class="facebook">
+                <img src="facebook.jpg" alt="Facebook" class="social-icon"> 
+                <span>Facebook</span>
+            </a>
+        </li>
+        </ul>
+            </div>
+        </div>
+        
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIONAL DELHI PUBLIC SCHOOL. All rights reserved.</p>
+            <p class="developer-credit">
+                Developed by <span class="animated-name">Darshan Jha </span><span class="heart-symbol">❤️</span><span class="heart-symbol">❤️</span> | 
+                Mentored By <span class="gradient-name">Vikash Kr.</span>
+            </p>
+        </div>
+        </footer>
+   <script> document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            // Menu ko dikhane ya chhupane ke liye 'active' class toggle karein
+            navMenu.classList.toggle('active');
+            
+            // Icon badalne ke liye (Bars to Cross)
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+}); </script>
+</body>
+</html>
+    
+    

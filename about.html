@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NDPS.in</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <style>
+        /* Base Styles - NDPS Blue */
+        body { margin: 0; font-family: Arial, sans-serif; background-color: #f4f7f6; }
+        .hero-section {
+            background-color: #0056b3; /* Dark Blue */
+            background-image: linear-gradient(135deg, #0056b3 0%, #0d47a1 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero-section h1 { font-size: 2.8em; margin-bottom: 5px; }
+        .hero-section p { font-size: 1.2em; }
+
+        .main-content { padding: 40px 20px; max-width: 1100px; margin: auto; }
+        .section-heading { font-size: 2em; color: #333; margin-bottom: 30px; border-bottom: 3px solid #ff9800; padding-bottom: 5px; display: inline-block;}
+        
+        /* Mission & Vision Cards */
+        .mission-vision-grid {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .vision-card {
+            flex: 1;
+            min-width: 300px;
+            padding: 25px;
+            border-left: 5px solid #ff9800; /* Orange Accent */
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .vision-card h3 { color: #0056b3; margin-top: 0; }
+
+        /* Unique Leadership Section */
+        .leadership-grid {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .leader-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            text-align: center;
+        }
+        .leader-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            object-fit: cover;
+            object-position: 1px 1px;
+            border: 4px solid #0056b3;
+            margin-bottom: 15px;
+         
+        }
+        .leader-card h4 {
+            color: #0056b3;
+            margin: 5px 0 2px;
+            font-size: 1.2em;
+        }
+        .leader-card p.title {
+            color: #ff9800;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .leader-card p.bio {
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        /* Facilities/Quick Links Section */
+        .two-column-grid {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .col-item {
+            flex: 1;
+            min-width: 300px;
+        }
+        .col-item h3 {
+             color: #0056b3;
+             border-bottom: 2px dashed #ccc;
+             padding-bottom: 5px;
+        }
+        .principal{ margin: ;
+            padding: 1px;
+
+        }
+        .quicklinks{
+            font-size: large;
+            font-style: italic;
+        }
+        
+    </style>
+    
+</head>
+<body> 
+    <header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+            <img src="school logo.jpg" alt="NDPS Logo">
+            <h1>NATIONAL DELHI PUBLIC SCHOOL</h1>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="main-nav" id="nav-menu">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="cta-button-nav">Portal Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <div class="hero-section">
+        <p>National Delhi Public School</p>
+        <h1 style="color: #fff;">Discover the NDPS Journey</h1>
+        <p>Excellence in Education, Since 2013</p>
+    </div>
+
+    <div class="main-content">
+        
+        <h2 class="section-heading">Our Story</h2>
+        <p>National Delhi Public School was founded in 2013 with the mission to foster a challenging and supportive environment that encourages critical thinking and holistic development, preparing students for a global society. We believe in nurturing leaders of tomorrow.</p>
+
+        <h2 class="section-heading" style="margin-top: 50px;">Our Core Values</h2>
+        <div class="mission-vision-grid">
+            <div class="vision-card">
+                <h3>Our Mission</h3>
+                <p>To foster a challenging learning environment that promotes creativity, critical thinking, and the highest standards of academic excellence.</p>
+            </div>
+            <div class="vision-card">
+                <h3>Our Vision</h3>
+                <p>To shape global citizens who are morally upright, intellectually curious, socially responsible, and technologically competent.</p>
+            </div>
+            <div class="vision-card">
+                <h3>Our Promise</h3>
+                <p>To provide personalized guidance and a safe, inclusive atmosphere where every child can achieve their maximum potential.</p>
+            </div>
+        </div>
+
+        <h2 class="section-heading" style="margin-top: 50px;">School Leadership</h2>
+        <div class="leadership-grid">
+            
+            <div class="leader-card">
+                <img src="director.jpg" alt="Director Image" class="director"> 
+                <h4>Mr. Prasoon Jha</h4>
+                <p class="title">Director, NDPS</p>
+                <p class="bio">A visionary educationist with over 10 years of experience, dedicated to setting new benchmarks in academic and holistic development.</p>
+            </div>
+
+            <div class="leader-card">
+                <img src="principal.jpg" alt="Principal Image" class="principal"> 
+                <h4>Mr. Shyam Bahadur Chettri</h4>
+                <p class="title">Principal, Senior Wing</p>
+                <p class="bio">An inspiring leader committed to providing the best learning environment and ensuring smooth day-to-day operations and student discipline.</p>
+            </div>
+        </div>
+        
+        
+                <h3 class="quicklinks">Quick Links</h3>
+                <ul>
+                    <li><a href="admissions.html">Admission Procedure</a></li>
+                    <li><a href="fee_structure.html">View Fee Structure</a></li>
+                    <li><a href="calendar.html">Academic Calendar</a></li>
+                    <li><a href="contact.html">Contact & Location</a></li>
+                    <li><a href="login.html">Student Portal Login</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+     <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h4>Contact NDPS</h4>
+                <p>Address: Nandapatti, Bemipur, Darbhanga, Bihar</p>
+                <p>Phone: 8235340663</p>
+                <p>Email: <a href="mailto:info@ndps.in">info@ndps.in</a></p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    
+                    <li><a href="calendar.html">School Calendar</a></li>  
+                    <li><a href="fee_structure.html">Fee Structure</a></li> 
+                    
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <p>Connect with us on social media.</p>
+                <ul>
+        <li >
+            <a href="https://www.facebook.com/share/1AvEoWSKnL/" target="_blank" aria-label="Follow us on Facebook" class="facebook">
+                <img src="facebook.jpg" alt="Facebook" class="social-icon"> 
+                <span>Facebook</span>
+            </a>
+        </li>
+        </ul>
+            </div>
+        </div>
+        
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIONAL DELHI PUBLIC SCHOOL. All rights reserved.</p>
+            <p class="developer-credit">
+                Developed by <span class="animated-name">Darshan Jha </span><span class="heart-symbol">❤️</span><span class="heart-symbol">❤️</span> | 
+                Mentored By <span class="gradient-name">Vikash Kr.</span>
+            </p>
+        </div>
+        </footer>
+     <script> document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            // Menu ko dikhane ya chhupane ke liye 'active' class toggle karein
+            navMenu.classList.toggle('active');
+            
+            // Icon badalne ke liye (Bars to Cross)
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+}); </script>
+    </body>
+</html>

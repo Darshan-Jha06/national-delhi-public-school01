@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NATIONAL DELHI PUBLIC SCHOOL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+   <header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+            <img src="school logo.jpg" alt="NDPS Logo">
+            <h1>NATIONAL DELHI PUBLIC SCHOOL</h1>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="main-nav" id="nav-menu">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="cta-button-nav">Portal Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <main class="page-content">
+        <div class="container">
+            <h2>Connect with NDPS</h2>
+            <p class="intro-text">
+                Please use the details below to contact the correct department for a quicker response.
+            </p>
+
+            <section class="contact-cards-section">
+                <h3>Departmental Contacts</h3>
+                <div class="contact-card-grid">
+                    
+                    <div class="contact-card animated-card">
+                        <div class="card-icon">📞</div>
+                        <h4>General Inquiry</h4>
+                        <p>For all general questions and school information.</p>
+                        <p><strong>Phone:</strong> [General Phone Number]</p>
+                        <p><strong>Email:</strong> <a href="mailto:info@ndps.in">info@ndps.in</a></p>
+                    </div>
+
+                    <div class="contact-card animated-card" style="animation-delay: 0.1s;">
+                        <div class="card-icon">📚</div>
+                        <h4>Admissions Office</h4>
+                        <p>Regarding new admissions, eligibility, and fee structure queries.</p>
+                        <p><strong>Phone:</strong> [Admissions Office Phone Number]</p>
+                        <p><strong>Email:</strong> <a href="mailto:admissions@ndps.in">admissions@ndps.in</a></p>
+                    </div>
+
+                    <div class="contact-card animated-card" style="animation-delay: 0.2s;">
+                        <div class="card-icon">💼</div>
+                        <h4>Careers & HR</h4>
+                        <p>For teaching or non-teaching positions at NDPS.</p>
+                        <p><strong>Email:</strong> <a href="mailto:careers@ndps.in">careers@ndps.in</a></p>
+                        <p><strong>Hours:</strong> Monday - Friday (9 AM - 4 PM)</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="location-form-section">
+                <div class="contact-info-grid">
+                    <div class="contact-map">
+                        <h3>Our Location</h3>
+                        <p><strong>Address:</strong> [Full School Address, Landmark, Delhi - Pin Code]</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.9651575970474!2d86.15031957460283!3d26.067395077161105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eddd28890589a1%3A0x600fbb41f239d6b!2sNational%20Delhi%20Public%20Schools!5e0!3m2!1sen!2sin!4v1765631787284!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+            <section class="location-details">
+                        <h2>Our Office Location</h2>
+    
+                        <a href="https://www.google.com/maps/search/?api=13" target="_blank" class="address-link">
+                        <p>Your Full Street Address Here</p>
+                        <p>City, State, Pincode</p>
+                    </a>
+    
+                       <a href="https://www.google.com/maps/search/?api=14" target="_blank" class="directions-button">
+                        Get Directions
+                    </a>
+            </section>
+
+                    <div class="contact-form-section">
+                        <h3>Send Us a Message</h3>
+                        <form action="contact_processor.php" method="POST" class="unique-contact-form">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="cta-button">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h4>Contact NDPS</h4>
+                <p>Address: [Your School Address, Delhi, India]</p>
+                <p>Phone: [Your Phone Number]</p>
+                <p>Email: <a href="mailto:info@ndps.in">info@ndps.in</a></p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">School Calendar</a></li>
+                    <li><a href="#">Fee Structure</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <p>Connect with us on social media.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIONAL DELHI PUBLIC SCHOOL. All rights reserved.</p>
+            <p class="developer-credit">
+                Developed by <span class="animated-name">Darshan Jha </span><span class="heart-symbol">❤️</span><span class="heart-symbol">❤️</span> | 
+                Mentored By <span class="gradient-name">Vikash Kr.</span>
+            </p>
+        </div>
+    </footer>
+     <script> document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            // Menu ko dikhane ya chhupane ke liye 'active' class toggle karein
+            navMenu.classList.toggle('active');
+            
+            // Icon badalne ke liye (Bars to Cross)
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+}); </script>
+</body>
+</html>

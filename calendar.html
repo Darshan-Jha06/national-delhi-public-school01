@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Calendar - NDPS Portal</title>
+    <style>
+        /* NOTE: Aapko yahan par apne student_dashboard.html ki poori CSS
+           (Jaise: body, sidebar, main-content, card, responsive media queries) 
+           copy karni hogi, ya fir use ek alag 'style.css' file mein daalkar link karna hoga. 
+        */
+        
+        /* Temporary basic styles for this page (Agar aapki CSS link nahi hai) */
+        body { margin: 0; font-family: Arial, sans-serif; background-color: #f4f7f6; }
+        .sidebar { /* ... */ background-color: #0056b3; color: white; width: 250px; position: fixed; height: 100%; padding-top: 20px;}
+        .main-content { margin-left: 250px; padding: 20px; }
+        .header-bar { padding-bottom: 20px; border-bottom: 1px solid #ddd; margin-bottom: 20px;}
+        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
+        
+        /* Calendar Specific Styles */
+        .calendar-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 20px; 
+            font-size: 0.95em;
+        }
+        .calendar-table th, .calendar-table td { 
+            border: 1px solid #ddd; 
+            padding: 12px; 
+            text-align: left; 
+        }
+        .calendar-table th { 
+            background-color: #0056b3; 
+            color: white; 
+        }
+        .calendar-table tr:nth-child(even) { background-color: #f9f9f9; }
+
+        @media (max-width: 768px) {
+            .sidebar { width: 100%; height: auto; position: relative; }
+            .main-content { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sidebar">
+        <h2>NDPS Portal</h2>
+        <ul>
+            <li><a href="student_dashboard.html">Dashboard</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="fee_status.html">Fee Status</a></li>
+            <li><a href="calendar.html" class="active">School Calendar</a></li> <li><a href="#" id="logoutLink">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header-bar">
+            <h1>Academic Calendar 2025-2026</h1>
+        </div>
+
+        <div class="card">
+            <h3>Important Dates and Holidays</h3>
+            
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event / Holiday</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="calendarEventsBody">
+                    <tr>
+                        <td>25 Dec 2025</td>
+                        <td>Christmas Day</td>
+                        <td style="color: green; font-weight: bold;">Holiday</td>
+                    </tr>
+                    <tr>
+                        <td>01 Jan 2026</td>
+                        <td>New Year Holiday</td>
+                        <td style="color: green;">Holiday</td>
+                    </tr>
+                    <tr>
+                        <td>15 Jan 2026</td>
+                        <td>PTM - Parent Teacher Meeting</td>
+                        <td style="color: #ff5722; font-weight: bold;">Event</td>
+                    </tr>
+                    <tr>
+                        <td>26 Jan 2026</td>
+                        <td>Republic Day Celebration</td>
+                        <td style="color: #0056b3;">Event</td>
+                    </tr>
+                    <tr>
+                        <td>01 Feb - 10 Feb 2026</td>
+                        <td>Final Term Examinations</td>
+                        <td style="color: #cc00cc; font-weight: bold;">Exams</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 20px; font-size: 0.9em; color: #555;">* Calendar events are subject to change. Check official school notice board for last-minute updates.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Authentication check - Agar user logged in nahi hai toh login page par bhej dega
+        const checkAuth = () => {
+            if (localStorage.getItem('loggedIn') !== 'true') {
+                window.location.href = 'login.html';
+            }
+        };
+        checkAuth();
+
+        // Logout functionality
+        document.getElementById('logoutLink').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('loggedIn');
+            localStorage.removeItem('studentRollNo');
+            window.location.href = 'login.html';
+        });
+    </script>
+     <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h4>Contact NDPS</h4>
+                <p>Address: Nandapatti, Bemipur, Darbhanga, Bihar</p>
+                <p>Phone: 8235340663</p>
+                <p>Email: <a href="mailto:info@ndps.in">info@ndps.in</a></p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    
+                    <li><a href="calendar.html">School Calendar</a></li>  
+                    <li><a href="fee_structure.html">Fee Structure</a></li> 
+                    
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <p>Connect with us on social media.</p>
+                <ul>
+        <li >
+            <a href="https://www.facebook.com/share/1AvEoWSKnL/" target="_blank" aria-label="Follow us on Facebook" class="facebook">
+                <img src="facebook.jpg" alt="Facebook" class="social-icon"> 
+                <span>Facebook</span>
+            </a>
+        </li>
+        </ul>
+            </div>
+        </div>
+        
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIONAL DELHI PUBLIC SCHOOL. All rights reserved.</p>
+            <p class="developer-credit">
+                Developed by <span class="animated-name">Darshan Jha </span><span class="heart-symbol">❤️</span><span class="heart-symbol">❤️</span> | 
+                Mentored By <span class="gradient-name">Vikash Kr.</span>
+            </p>
+        </div>
+        </footer>
+    
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events - NDPS.in</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <style>
+        /* Base Styles */
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; 
+            color: #333;
+            line-height: 1.6;
+        }
+        .main-content { 
+            padding: 40px 20px 60px; 
+            max-width: 1100px; 
+            margin: auto; 
+        }
+        .section-heading { 
+            font-size: 2.2em; 
+            color: #1a237e;
+            margin-bottom: 30px; 
+            border-bottom: 3px solid #ff9800;
+            padding-bottom: 5px; 
+            display: inline-block;
+        }
+
+        /* Hero Banner */
+        .events-hero {
+            background-color: #0d47a1; /* Darker Blue */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Main Grid Layout (Sidebar + Content) */
+        .news-layout {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .content-area {
+            flex: 3; /* Content area takes 3 parts */
+            min-width: 600px;
+        }
+        .sidebar-area {
+            flex: 1; /* Sidebar takes 1 part */
+            min-width: 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            height: fit-content; /* Sidebar height adjust */
+        }
+
+        /* News Card Styling */
+        .news-card {
+            display: flex;
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+        .news-card:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+        .news-image {
+            width: 30%;
+            min-width: 150px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-details {
+            padding: 20px;
+            width: 70%;
+        }
+        .news-details h3 {
+            color: #0056b3;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .news-meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Sidebar: Categories/Tags */
+        .sidebar-area h3 {
+            color: #ff9800;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tag {
+            background-color: #e3f2fd; /* Light Blue */
+            color: #0056b3;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .tag:hover {
+            background-color: #bbdefb;
+        }
+        
+        /* Sidebar: Upcoming Events */
+        .upcoming-event {
+            border-left: 3px solid #4CAF50; /* Green accent */
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+        .upcoming-event p { margin: 0; font-size: 0.95em; }
+        .upcoming-event strong { color: #4CAF50; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .news-layout { flex-direction: column; }
+            .content-area, .sidebar-area { min-width: 100%; }
+        }
+        @media (max-width: 650px) {
+            .news-card { flex-direction: column; }
+            .news-image { width: 100%; height: 250px; }
+            .news-details { width: 100%; }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+            <img src="school logo.jpg" alt="NDPS Logo">
+            <h1>NATIONAL DELHI PUBLIC SCHOOL</h1>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="main-nav" id="nav-menu">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html" >Admissions</a></li>
+                <li><a href="news.html" class="active">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="cta-button-nav">Portal Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+   
+    
+    <div class="main-content">
+        
+        <div class="events-hero">
+            <h1 style="color: #bbdefb;">Stay Updated with NDPS</h1>
+            <p>Circulars, Achievements, and School Activities</p>
+        </div>
+
+        <div class="news-layout">
+            
+            <div class="content-area">
+                <h2 class="section-heading">Latest School News</h2>
+
+                <div class="news-card">
+                    <img src="annual_day_photo.jpg" alt="Annual Day Celebration" class="news-image">
+                    <div class="news-details">
+                        <p class="news-meta">10 DEC 2025 | Category: **Events**</p>
+                        <h3>Annual Day 2025: Celebrating 35 Years of Excellence</h3>
+                        <p>The 35th Annual Day celebration was a grand success, showcasing spectacular performances by students across all grades. The Director praised the dedication of the staff and students.</p>
+                        <a href="#" style="color: #ff9800; font-weight: bold;">Read Full Report ➔</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="quiz_winners.jpg" alt="Quiz Competition Winners" class="news-image">
+                    <div class="news-details">
+                        <p class="news-meta">05 DEC 2025 | Category: **Academics**</p>
+                        <h3>NDPS Wins Inter-School Science Quiz Trophy</h3>
+                        <p>Our Class X team secured the first position in the prestigious City Science Quiz competition, bringing laurels to the school. Congratulations to the winners!</p>
+                        <a href="#" style="color: #ff9800; font-weight: bold;">View Gallery ➔</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="circular_photo.jpg" alt="New Circular" class="news-image">
+                    <div class="news-details">
+                        <p class="news-meta">01 DEC 2025 | Category: **Circular**</p>
+                        <h3>Important Circular: Winter Uniform & Timings</h3>
+                        <p>Parents are requested to kindly note the revised school timings starting from January 1st, 2026. Please refer to the attached PDF for full details.</p>
+                        <a href="#" style="color: #ff9800; font-weight: bold;">Download Circular PDF ➔</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sidebar-area">
+                
+                <h3>Filter by Category</h3>
+                <div class="tag-list">
+                    <div class="tag">All News</div>
+                    <div class="tag">Events (3)</div>
+                    <div class="tag">Academics (5)</div>
+                    <div class="tag">Circulars (2)</div>
+                    <div class="tag">Sports (1)</div>
+                </div>
+                
+                <h3 style="margin-top: 40px;">Upcoming Events</h3>
+                <div class="upcoming-event">
+                    <p><strong>15 Jan 2026:</strong> PTM for Classes I - X</p>
+                </div>
+                 <div class="upcoming-event">
+                    <p><strong>26 Jan 2026:</strong> Republic Day Celebrations</p>
+                </div>
+                 <div class="upcoming-event">
+                    <p><strong>01 Feb 2026:</strong> Final Exam Start Date</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+     <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h4>Contact NDPS</h4>
+                <p>Address: Nandapatti, Bemipur, Darbhanga, Bihar</p>
+                <p>Phone: 8235340663</p>
+                <p>Email: <a href="mailto:info@ndps.in">info@ndps.in</a></p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    
+                    <li><a href="calendar.html">School Calendar</a></li>  
+                    <li><a href="fee_structure.html">Fee Structure</a></li> 
+                    
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <p>Connect with us on social media.</p>
+                <ul>
+        <li >
+            <a href="https://www.facebook.com/share/1AvEoWSKnL/" target="_blank" aria-label="Follow us on Facebook" class="facebook">
+                <img src="facebook.jpg" alt="Facebook" class="social-icon"> 
+                <span>Facebook</span>
+            </a>
+        </li>
+        </ul>
+            </div>
+        </div>
+        
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIONAL DELHI PUBLIC SCHOOL. All rights reserved.</p>
+            <p class="developer-credit">
+                Developed by <span class="animated-name">Darshan Jha </span><span class="heart-symbol">❤️</span><span class="heart-symbol">❤️</span> | 
+                Mentored By <span class="gradient-name">Vikash Kr.</span>
+            </p>
+        </div>
+        </footer>
+   <script> document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            // Menu ko dikhane ya chhupane ke liye 'active' class toggle karein
+            navMenu.classList.toggle('active');
+            
+            // Icon badalne ke liye (Bars to Cross)
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+}); </script>
+    </body>
+</html>
