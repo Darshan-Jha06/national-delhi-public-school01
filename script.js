@@ -86,4 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
             icon.classList.toggle('fa-times');
         });
     }
+
 });
+const contactForm = document.querySelector('form');
+if (contactForm) {
+    contactForm.onsubmit = (e) => {
+        // Formspree apne aap redirect kar dega, 
+        // par aap chahte ho ki page par hi alert aaye toh iska use karein.
+        console.log("Sending message to school administration...");
+    };
+}
